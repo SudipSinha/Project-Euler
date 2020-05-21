@@ -16,7 +16,7 @@
       
         <meta name="author" content="Sudip Sinha">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <link rel="shortcut icon" href="https://projecteuler.net/favicon.ico">
       <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.7">
     
     
@@ -27,6 +27,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.4c7052ca.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.b79bcd20.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#03a9f4">
       
     
     
@@ -39,10 +45,6 @@
     
     
     
-      <link rel="stylesheet" href="../css/katex.my.css">
-    
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
-    
     
       
     
@@ -50,7 +52,9 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="light-blue" data-md-color-accent="cyan">
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -145,32 +149,6 @@
         
       
       
-        
-          
-
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  <li class="md-tabs__item">
-    
-      <a href=".." class="md-tabs__link md-tabs__link--active">
-        Project Euler solutions
-      </a>
-    
-  </li>
-
-      
-        
-      
-        
-      
-        
-      
-    </ul>
-  </div>
-</nav>
         
       
       <main class="md-main" data-md-component="main">
@@ -393,19 +371,38 @@
                 <h1 id="sum-square-difference">Sum square difference<a class="headerlink" href="#sum-square-difference" title="Permanent link">&para;</a></h1>
 <h2 id="problem">Problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h2>
 <p>The sum of the squares of the first ten natural numbers is</p>
-<div class="arithmatex">\[ 1^2 + 2^2 + ... + 10^2 = 385 . \]</div>
+<div>
+<div class="MathJax_Preview"> 1^2 + 2^2 + ... + 10^2 = 385 . </div>
+<script type="math/tex; mode=display"> 1^2 + 2^2 + ... + 10^2 = 385 . </script>
+</div>
 <p>The square of the sum of the first ten natural numbers is</p>
-<div class="arithmatex">\[ (1 + 2 + ... + 10)^2 = 55^2 = 3025 . \]</div>
-<p>Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is <span class="arithmatex">\( 3025 - 385 = 2640 \)</span>.</p>
+<div>
+<div class="MathJax_Preview"> (1 + 2 + ... + 10)^2 = 55^2 = 3025 . </div>
+<script type="math/tex; mode=display"> (1 + 2 + ... + 10)^2 = 55^2 = 3025 . </script>
+</div>
+<p>Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is <span><span class="MathJax_Preview"> 3025 - 385 = 2640 </span><script type="math/tex"> 3025 - 385 = 2640 </script></span>.</p>
 <p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>
 <h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
-<div class="arithmatex">\[ Δ(n) = \left( \frac12 n (n+1) \right)^2 - \frac16 n (n + 1) (2n + 1) = \frac{1}{12} n (n + 1) (3 n^2 - n - 2) , \]</div>
+<!-- \[ Δ(n) = \left( ∑_{i=1}^n i \right)^2 - ∑_{i=1}^n i^2 = \left( \frac12 n (n+1) \right)^2 - \frac16 n (n + 1) (2n + 1) = \frac{1}{12} n (n + 1) (3 n^2 - n - 2) . \] -->
+
+<div>
+<div class="MathJax_Preview">\begin{align*}
+Δ(n)  &amp; =  \left( ∑_{i=1}^n i \right)^2 - ∑_{i=1}^n i^2  \\
+    &amp; =  \left( \frac12 n (n+1) \right)^2 - \frac16 n (n + 1) (2n + 1)  \\
+    &amp; = \frac{1}{12} n (n + 1) (3 n^2 - n - 2)  .  \\
+\end{align*}</div>
+<script type="math/tex; mode=display">\begin{align*}
+Δ(n)  & =  \left( ∑_{i=1}^n i \right)^2 - ∑_{i=1}^n i^2  \\
+    & =  \left( \frac12 n (n+1) \right)^2 - \frac16 n (n + 1) (2n + 1)  \\
+    & = \frac{1}{12} n (n + 1) (3 n^2 - n - 2)  .  \\
+\end{align*}</script>
+</div>
 <h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><span class="lineno" data-linenos="1 "></span><span class="nd">@time</span> <span class="n">println</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="p">(</span><span class="mi">100</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">-</span> <span class="mi">100</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">÷</span> <span class="mi">12</span><span class="p">)</span>
 </pre></div>
 
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
-<p>We simply have <span class="arithmatex">\( Δ(100) = 25164150 \)</span>.</p>
+<p>We simply have <span><span class="MathJax_Preview"> Δ(100) = 25164150 </span><script type="math/tex"> Δ(100) = 25164150 </script></span>.</p>
                 
               
               
@@ -537,18 +534,16 @@
       <script>
         app = initialize({
           base: "..",
-          features: ["instant", "tabs"],
+          features: [],
           search: Object.assign({
             worker: "../assets/javascripts/worker/search.f6ebf1dc.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
       
-        <script src="../js/arithmatex2katex.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

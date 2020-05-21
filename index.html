@@ -16,7 +16,7 @@
       
         <meta name="author" content="Sudip Sinha">
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <link rel="shortcut icon" href="https://projecteuler.net/favicon.ico">
       <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.7">
     
     
@@ -27,6 +27,12 @@
     
       <link rel="stylesheet" href="assets/stylesheets/main.4c7052ca.min.css">
       
+        <link rel="stylesheet" href="assets/stylesheets/palette.b79bcd20.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#03a9f4">
       
     
     
@@ -39,10 +45,6 @@
     
     
     
-      <link rel="stylesheet" href="css/katex.my.css">
-    
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
-    
     
       
     
@@ -50,7 +52,9 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="light-blue" data-md-color-accent="cyan">
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -138,32 +142,6 @@
         
       
       
-        
-          
-
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  <li class="md-tabs__item">
-    
-      <a href="." class="md-tabs__link md-tabs__link--active">
-        Project Euler solutions
-      </a>
-    
-  </li>
-
-      
-        
-      
-        
-      
-        
-      
-    </ul>
-  </div>
-</nav>
         
       
       <main class="md-main" data-md-component="main">
@@ -388,7 +366,7 @@
 <p>These are <em>my</em> solutions to the first hundred problems of <a href="https://projecteuler.net/">Project Euler</a> in <a href="https://julialang.org/">Julia</a>. I would highly recommend you to try the problems first before you look at these (or any) solutions.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>To quickly visit the page for the <span class="arithmatex">\( n \)</span>th problem in Project Euler, go to <a href="https://projecteuler.net/problem=1">https://projecteuler.net/problem=[n]</a>, where <span class="arithmatex">\( n \)</span> is in decimal without any leading zeros.</p>
+<p>To quickly visit the page for the <span><span class="MathJax_Preview"> n </span><script type="math/tex"> n </script></span>th problem in Project Euler, go to <a href="https://projecteuler.net/problem=1">https://projecteuler.net/problem=[n]</a>, where <span><span class="MathJax_Preview"> n </span><script type="math/tex"> n </script></span> is in decimal representation without leading zeros.</p>
 </div>
 <h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h2>
 <p>One of my goals is to make my solutions to these problems accessible to everyone, and also to open my solutions to scrutiny by others. I hope they help you as much as they have helped me.</p>
@@ -407,8 +385,10 @@
 <p>This website is designed using the following.</p>
 <ul>
 <li><a href="https://www.mkdocs.org/">MkDocs</a> for static site generation.</li>
-<li><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a> for the material theme.</li>
-<li><a href="https://katex.org/"><span class="arithmatex">\( \KaTeX \)</span></a> for processing <span class="arithmatex">\( \LaTeX \)</span>.</li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a> for the material theme.
+<!-- *   <a href="https://katex.org/">klzzwxh:0004</a> for processing <span><span class="MathJax_Preview"> \LaTeX </span><script type="math/tex"> \LaTeX </script></span>. --></li>
+<li><a href="https://www.mathjax.org/">MathJax</a> for rendering <span><span class="MathJax_Preview"> \LaTeX </span><script type="math/tex"> \LaTeX </script></span>.
+<!-- I am not using KaTeX because I do not know how to link begin..end block from Arithmatex with KaTeX. ToDo: ask! --></li>
 </ul>
                 
               
@@ -527,18 +507,16 @@
       <script>
         app = initialize({
           base: ".",
-          features: ["instant", "tabs"],
+          features: [],
           search: Object.assign({
             worker: "assets/javascripts/worker/search.f6ebf1dc.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
       
-        <script src="js/arithmatex2katex.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

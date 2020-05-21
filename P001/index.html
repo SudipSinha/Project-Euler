@@ -16,7 +16,7 @@
       
         <meta name="author" content="Sudip Sinha">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <link rel="shortcut icon" href="https://projecteuler.net/favicon.ico">
       <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.7">
     
     
@@ -27,6 +27,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.4c7052ca.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.b79bcd20.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#03a9f4">
       
     
     
@@ -39,10 +45,6 @@
     
     
     
-      <link rel="stylesheet" href="../css/katex.my.css">
-    
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
-    
     
       
     
@@ -50,7 +52,9 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="light-blue" data-md-color-accent="cyan">
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -146,32 +150,6 @@
       
       
         
-          
-
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  <li class="md-tabs__item">
-    
-      <a href=".." class="md-tabs__link md-tabs__link--active">
-        Project Euler solutions
-      </a>
-    
-  </li>
-
-      
-        
-      
-        
-      
-        
-      
-    </ul>
-  </div>
-</nav>
-        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
@@ -265,6 +243,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    Methodology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -328,6 +327,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    Methodology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -350,17 +370,17 @@
                 
                 <h1 id="multiples-of-3-and-5">Multiples of 3 and 5<a class="headerlink" href="#multiples-of-3-and-5" title="Permanent link">&para;</a></h1>
 <h2 id="problem">Problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h2>
-<p>If we list all the natural numbers below <span class="arithmatex">\( 10 \)</span> that are multiples of <span class="arithmatex">\( 3 \)</span> or <span class="arithmatex">\( 5 \)</span>, we get <span class="arithmatex">\( 3 \)</span>, <span class="arithmatex">\( 5 \)</span>, <span class="arithmatex">\( 6 \)</span> and <span class="arithmatex">\( 9 \)</span>. The sum of these multiples is <span class="arithmatex">\( 23 \)</span>.</p>
-<p>Find the sum of all the multiples of <span class="arithmatex">\( 3 \)</span> or <span class="arithmatex">\( 5 \)</span> below <span class="arithmatex">\( 1000 \)</span>.</p>
-<h1 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h1>
+<p>If we list all the natural numbers below <span><span class="MathJax_Preview"> 10 </span><script type="math/tex"> 10 </script></span> that are multiples of <span><span class="MathJax_Preview"> 3 </span><script type="math/tex"> 3 </script></span> or <span><span class="MathJax_Preview"> 5 </span><script type="math/tex"> 5 </script></span>, we get <span><span class="MathJax_Preview"> 3 </span><script type="math/tex"> 3 </script></span>, <span><span class="MathJax_Preview"> 5 </span><script type="math/tex"> 5 </script></span>, <span><span class="MathJax_Preview"> 6 </span><script type="math/tex"> 6 </script></span> and <span><span class="MathJax_Preview"> 9 </span><script type="math/tex"> 9 </script></span>. The sum of these multiples is <span><span class="MathJax_Preview"> 23 </span><script type="math/tex"> 23 </script></span>.</p>
+<p>Find the sum of all the multiples of <span><span class="MathJax_Preview"> 3 </span><script type="math/tex"> 3 </script></span> or <span><span class="MathJax_Preview"> 5 </span><script type="math/tex"> 5 </script></span> below <span><span class="MathJax_Preview"> 1000 </span><script type="math/tex"> 1000 </script></span>.</p>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
 <p>This is a simple brute force problem.</p>
-<h1 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h1>
+<h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><span class="lineno" data-linenos="1 "></span><span class="n">multiples</span><span class="p">(</span><span class="n">limit</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="n">sum</span><span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="o">∈</span> <span class="mi">3</span><span class="o">:</span><span class="n">limit</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">i</span><span class="o">%</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
 <span class="lineno" data-linenos="2 "></span><span class="nd">@time</span> <span class="n">println</span><span class="p">(</span><span class="n">multiples</span><span class="p">(</span><span class="mi">999</span><span class="p">))</span>
 </pre></div>
 
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
-<p><span class="arithmatex">\( 233168 \)</span></p>
+<p><span><span class="MathJax_Preview"> 233168 </span><script type="math/tex"> 233168 </script></span></p>
                 
               
               
@@ -492,18 +512,16 @@
       <script>
         app = initialize({
           base: "..",
-          features: ["instant", "tabs"],
+          features: [],
           search: Object.assign({
             worker: "../assets/javascripts/worker/search.f6ebf1dc.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
       
-        <script src="../js/arithmatex2katex.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
