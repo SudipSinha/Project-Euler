@@ -1,28 +1,29 @@
-# Project information
 site_name: Project Euler solutions
-site_description: Solutions to the first 100 problems of [Project Euler](https://projecteuler.net/).
+site_description: Solutions to the first 100 problems of [Project Euler](https://projecteuler.net/)
 site_author: Sudip Sinha
 site_url: https://SudipSinha.github.io/Project-Euler
 
-# Source repository
 repo_name: SudipSinha/Project-Euler
 repo_url: https://github.com/SudipSinha/Project-Euler
 
-# Copyright
 copyright: <a href="http://github.com/SudipSinha">Sudip Sinha</a> &copy; 2020 onwards
 
-# Extensions
 markdown_extensions:
   - pymdownx.arithmatex:
-      generic: true    # This is required for both MathJax and KaTeX
-  # markdown_katex only works for GitLab syntax ($` n `$ and ```math n ```)
-  # - markdown_katex:
-  #     no_inline_svg: True
-  #     insert_fonts_css: True
-  #     macro-file: macros.tex
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.details
+  - pymdownx.magiclink:
+      provider: 'GitHub'
+      user: 'SudipSinha'
+      hide_protocol: true
+      repo_url_shortener: true
+      social_url_shorthand: true
+      repo_url_shorthand: true
+      social_url_shorthand: true
+  - pymdownx.mark
+  - pymdownx.critic
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -39,13 +40,9 @@ markdown_extensions:
   - toc:
       permalink: true
 
-# Configuration
 theme:
   name: material
   language: en
-  # features:
-  #   - instant    # DO NOT USE: It stops math from rendering without reloading!
-  #   - tabs    # Just looks bad.
   palette:
     primary: light blue
     accent: cyan
@@ -55,22 +52,25 @@ theme:
     repo: fontawesome/brands/github
 
 extra_javascript:
-  # For KaTeX, use the following three lines.
-  # - js/arithmatex2katex.js
-  # - https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js
-  # - https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js
-  # For MathJax, use the following two lines and remove the `extra_css`s.
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js    # Google Adsense
 
-# For KaTeX, we need to use these CSS files.
-# extra_css:
-#   - css/katex.my.css
-#   - https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css
+plugins:
+  - search
+  - awesome-pages:
+      collapse_single_pages: true
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: iso_datetime
 
-# Social
-# Find icon folders [here](https://github.com/squidfunk/mkdocs-material/tree/master/material/.icons/)
+google_analytics:
+  - UA-154154955-1
+  - auto
+
 extra:
+  disqus: SudipSinha
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/SudipSinha

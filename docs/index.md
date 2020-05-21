@@ -38,3 +38,5 @@ This website is designed using the following.
 <!-- *   [\( \KaTeX \)](https://katex.org/) for processing \( \LaTeX \). -->
 *   [MathJax](https://www.mathjax.org/) for rendering \( \LaTeX \).
 <!-- I am not using KaTeX because I do not know how to link begin..end block from Arithmatex with KaTeX. ToDo: ask! -->
+
+A big shoutout to @ankanpal100 for getting me excited again about programming.
