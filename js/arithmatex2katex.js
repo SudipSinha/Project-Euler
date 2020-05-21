@@ -2,18 +2,18 @@
 // https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
 // https://facelessuser.github.io/MarkdownPreview/extras/
 
-window.MathJax = {
-  tex: {
-    inlineMath: [ ["\\(","\\)"] ],
-    displayMath: [ ["\\[","\\]"] ],
-    processEscapes: true,
-    processEnvironments: true
-  },
-  options: {
-    ignoreHtmlClass: ".*|",
-    processHtmlClass: "arithmatex"
-  }
-};
+// window.MathJax = {
+//   tex: {
+//     inlineMath: [ ["\\(","\\)"] ],
+//     displayMath: [ ["\\[","\\]"] ],
+//     processEscapes: true,
+//     processEnvironments: true
+//   },
+//   options: {
+//     ignoreHtmlClass: ".*|",
+//     processHtmlClass: "arithmatex"
+//   }
+// };
 
 
 (function () {
