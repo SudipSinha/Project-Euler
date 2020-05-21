@@ -1,0 +1,11 @@
+.katex {
+  font-size: 1.1em !important;    /* Smaller fonts for inline math */
+}
+
+.katex-display > .katex {
+  font-size: 1.21em !important;    /* Larger fonts for display math */
+}
+
+.katex-html {
+  overflow-y: hidden;
+}
