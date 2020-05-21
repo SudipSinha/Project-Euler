@@ -384,14 +384,14 @@
                 
                 <h1 id="special-pythagorean-triplet">Special Pythagorean triplet<a class="headerlink" href="#special-pythagorean-triplet" title="Permanent link">&para;</a></h1>
 <h2 id="problem">Problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h2>
-<p>A <em>Pythagorean triplet</em> is a set of three natural numbers, <span><span class="MathJax_Preview"> a &lt; b &lt; c </span><script type="math/tex"> a < b < c </script></span>, for which, <span><span class="MathJax_Preview"> a^2 + b^2 = c^2 </span><script type="math/tex"> a^2 + b^2 = c^2 </script></span>.
-For example, <span><span class="MathJax_Preview"> 3^2 + 4^2 = 9 + 16 = 25 = 5^2 </span><script type="math/tex"> 3^2 + 4^2 = 9 + 16 = 25 = 5^2 </script></span>.</p>
-<p>There exists exactly one Pythagorean triplet for which <span><span class="MathJax_Preview"> a + b + c = 1000 </span><script type="math/tex"> a + b + c = 1000 </script></span>.
-Find the product <span><span class="MathJax_Preview"> abc </span><script type="math/tex"> abc </script></span>.</p>
+<p>A <em>Pythagorean triplet</em> is a set of three natural numbers, <span class="arithmatex">\( a &lt; b &lt; c \)</span>, for which, <span class="arithmatex">\( a^2 + b^2 = c^2 \)</span>.
+For example, <span class="arithmatex">\( 3^2 + 4^2 = 9 + 16 = 25 = 5^2 \)</span>.</p>
+<p>There exists exactly one Pythagorean triplet for which <span class="arithmatex">\( a + b + c = 1000 \)</span>.
+Find the product <span class="arithmatex">\( abc \)</span>.</p>
 <h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
-<p>Let <span><span class="MathJax_Preview"> p </span><script type="math/tex"> p </script></span> be the given perimeter of the triangle. We parameterize the sides as <span><span class="MathJax_Preview"> a = m^2 - n^2, b = 2mn, c = m^2 + n^2 </span><script type="math/tex"> a = m^2 - n^2, b = 2mn, c = m^2 + n^2 </script></span>, where <span><span class="MathJax_Preview"> m &gt; n &gt; 0 </span><script type="math/tex"> m > n > 0 </script></span>. Using the fact that <span><span class="MathJax_Preview"> a + b + c = p </span><script type="math/tex"> a + b + c = p </script></span>, we get <span><span class="MathJax_Preview"> 2 m (m + n) = p </span><script type="math/tex"> 2 m (m + n) = p </script></span>.</p>
-<p>Now we need good bounds for <span><span class="MathJax_Preview"> m, n </span><script type="math/tex"> m, n </script></span> in order to reduce the search space. Note that for <span><span class="MathJax_Preview"> n </span><script type="math/tex"> n </script></span> to be maximum, we must have <span><span class="MathJax_Preview"> m = n + 1 </span><script type="math/tex"> m = n + 1 </script></span>, so we get the estimate <span><span class="MathJax_Preview"> n ≤ \frac{\sqrt{p}}{2} </span><script type="math/tex"> n ≤ \frac{\sqrt{p}}{2} </script></span>. On the other hand, for <span><span class="MathJax_Preview"> m </span><script type="math/tex"> m </script></span> to maximum, we require <span><span class="MathJax_Preview"> n = 1 </span><script type="math/tex"> n = 1 </script></span>, so we get the estimate <span><span class="MathJax_Preview"> m ≤ \sqrt{\frac{p}{2}} </span><script type="math/tex"> m ≤ \sqrt{\frac{p}{2}} </script></span>.</p>
-<p>Finally, the required product after simplification is <span><span class="MathJax_Preview"> p n (m - n) (m^2 + n^2) </span><script type="math/tex"> p n (m - n) (m^2 + n^2) </script></span>.</p>
+<p>Let <span class="arithmatex">\( p \)</span> be the given perimeter of the triangle. We parameterize the sides as <span class="arithmatex">\( a = m^2 - n^2, b = 2mn, c = m^2 + n^2 \)</span>, where <span class="arithmatex">\( m &gt; n &gt; 0 \)</span>. Using the fact that <span class="arithmatex">\( a + b + c = p \)</span>, we get <span class="arithmatex">\( 2 m (m + n) = p \)</span>.</p>
+<p>Now we need good bounds for <span class="arithmatex">\( m, n \)</span> in order to reduce the search space. Note that for <span class="arithmatex">\( n \)</span> to be maximum, we must have <span class="arithmatex">\( m = n + 1 \)</span>, so we get the estimate <span class="arithmatex">\( n ≤ \frac{\sqrt{p}}{2} \)</span>. On the other hand, for <span class="arithmatex">\( m \)</span> to maximum, we require <span class="arithmatex">\( n = 1 \)</span>, so we get the estimate <span class="arithmatex">\( m ≤ \sqrt{\frac{p}{2}} \)</span>.</p>
+<p>Finally, the required product after simplification is <span class="arithmatex">\( p n (m - n) (m^2 + n^2) \)</span>.</p>
 <h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
 <p>Now the code is just a single line of computation.</p>
 <div class="highlight"><pre><span></span><span class="lineno" data-linenos=" 1 "></span><span class="k">function</span> <span class="n">special_Pythagorean_triplet</span><span class="p">(</span><span class="n">perimeter</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span><span class="o">::</span><span class="kt">Int</span>
@@ -407,7 +407,7 @@ Find the product <span><span class="MathJax_Preview"> abc </span><script type="m
 </pre></div>
 
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
-<p><span><span class="MathJax_Preview"> 31875000 </span><script type="math/tex"> 31875000 </script></span></p>
+<p><span class="arithmatex">\( 31875000 \)</span></p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="https://projecteuler.net/overview=009">The problem overview</a>.</li>
