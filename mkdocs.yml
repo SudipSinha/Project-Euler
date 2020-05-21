@@ -13,9 +13,8 @@ copyright: <a href="http://github.com/SudipSinha">Sudip Sinha</a> &copy; 2020 on
 
 # Extensions
 markdown_extensions:
-  # - pymdownx.arithmatex:
-  #     generic: true
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true    # This is required for both MathJax and KaTeX
   # markdown_katex only works for GitLab syntax ($` n `$ and ```math n ```)
   # - markdown_katex:
   #     no_inline_svg: True
