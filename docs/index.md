@@ -5,7 +5,7 @@
 These are *my* solutions to the first hundred problems of [Project Euler](https://projecteuler.net/) in [Julia](https://julialang.org/). I would highly recommend you to try the problems first before you look at these (or any) solutions.
 
 !!! tip
-    To quickly visit the page for the \( n \)th problem in Project Euler, go to [https://projecteuler.net/problem=[n]](https://projecteuler.net/problem=1), where \( n \) is in decimal without any leading zeros.
+    To quickly visit the page for the \( n \)th problem in Project Euler, go to [https://projecteuler.net/problem=[n]](https://projecteuler.net/problem=1), where \( n \) is in decimal representation without leading zeros.
 
 
 ## Motivation
@@ -35,4 +35,6 @@ This website is designed using the following.
 
 *   [MkDocs](https://www.mkdocs.org/) for static site generation.
 *   [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) for the material theme.
-*   [\( \KaTeX \)](https://katex.org/) for processing \( \LaTeX \).
+<!-- *   [\( \KaTeX \)](https://katex.org/) for processing \( \LaTeX \). -->
+*   [MathJax](https://www.mathjax.org/) for rendering \( \LaTeX \).
+<!-- I am not using KaTeX because I do not know how to link begin..end block from Arithmatex with KaTeX. ToDo: ask! -->

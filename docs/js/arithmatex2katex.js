@@ -1,4 +1,4 @@
-// Note: The problem of going via the Arithmatex route is that it cannot handle begin..end blocks.
+// Note: I still do not know how to handle begin..end blocks.
 // https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
 // https://facelessuser.github.io/MarkdownPreview/extras/
 
